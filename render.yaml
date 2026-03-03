@@ -2,6 +2,7 @@ services:
   - type: web
     name: gslx-ai-agent
     env: python
+    pythonVersion: "3.11.0"
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --workers 2 --timeout 60
     envVars:
